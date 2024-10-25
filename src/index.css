@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.custom-h2 {
+  font-weight: 900;
+  color: #6d91ee;
+  font-size: 64px;
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 580px) {
+  .custom-h2 {
+    font-weight: 700;
+    font-size: 40px;
+  
+  }
+}
+
+.custom-button {
+  width: 200px;
+  height: 70px;
+  background-color: #5180f6;
+  border-radius: 40px;
+  border: none;
+  font-weight: 700;
+  color: white;
+  font-size: 22px;
+}

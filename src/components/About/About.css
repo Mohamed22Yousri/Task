@@ -1,0 +1,128 @@
+.about {
+  background-image: url(../Assets/Rectangle\ 262.png);
+  width: 100% !important;
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 80px;
+}
+
+.about .about-text h2 {
+  font-weight: 900;
+  font-size: 40px;
+  text-align: start;
+}
+.about-text {
+  left: 17%;
+}
+.about-text p {
+  max-width: 500px;
+  text-align: start;
+  font-size: 14px;
+}
+.about-text {
+  margin-bottom: 100px;
+}
+.about-sec2 {
+  display: flex;
+  justify-content: end;
+  right: 80px;
+  top: 80px;
+}
+.about-sec2 h2 {
+  font-weight: 900;
+  font-size: 40px;
+  text-align: end;
+}
+.about-sec2 p {
+  max-width: 400px;
+}
+.about-button{
+bottom: 20px;
+}
+
+.about-button button {
+    color: black;
+    font-size: 20px;
+    background-color: #EEC04B;
+}
+
+/* responsive  */
+
+@media only screen and (max-width: 1030px) {
+  .about .img img {
+    height: 432px !important;
+  }
+  .about-text {
+    left: 28px;
+  }
+  .about-sec2 p {
+    position: absolute;
+    width: 500px;
+    right: -61px;
+  }
+  .about-button button {
+    width: 150px;
+    height: 50px;
+  }
+}
+@media only screen and (max-width: 992px) {
+    .about .img img {
+        height: 397px !important;
+        width: 60% !important;
+      }
+      .about-sec2 {
+            margin-top: -60px;
+      }
+      .about-sec2 p {
+        font-size: 14px;
+        width: 300px;
+
+      }
+      .about-text img {
+        width: 60%;
+      }
+      .about-text p {
+        width: 300px;
+      }
+   
+
+}
+@media only screen and (max-width: 814px) {
+
+    .about-sec2 p {
+        font-size: 10px;
+        width: 260px;
+    }
+    .about .img img {
+        height: 291px !important;
+      }
+      .about-text img {
+        width: 40%;
+      }
+  }
+  @media only screen and (max-width: 655px) {
+    .about-text p {
+       display: none;
+      }
+      .about .img img {
+        height: 261px !important;
+      }
+      .about-button button {
+        width: 80px;
+        height: 40px;
+        font-weight: normal;
+        font-size: 14px;
+      }
+      .about-button{
+        bottom: 5px;
+        }
+        .about-sec2 p span {
+            display: none;
+        }
+        .about-sec2 p{
+            width: 240px;
+
+        }
+      
+  }

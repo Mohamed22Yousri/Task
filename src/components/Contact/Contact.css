@@ -1,0 +1,32 @@
+.contact .contact-inputs {
+  display: flex;
+  flex-direction: column;
+}
+.contact input {
+  background-color: #cedcff;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  height: 56px;
+  width: 374px;
+  padding-left: 10px;
+}
+.contact-inputs button {
+    border: 3px solid #5180F6;
+    width: 168px;
+    height: 56px;
+    border-radius: 40px;
+    background-color: transparent;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+
+}
+span i {
+    color: #5180F6;
+}
+.footer {
+    background-color: #0C1E49;
+    height: 140px;
+}
