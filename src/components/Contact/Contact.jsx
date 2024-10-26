@@ -3,22 +3,24 @@ import "./Contact.css";
 import axios from "axios";
 
 const Contact = () => {
-  const [data, setData] = useState({
+  const [formvalue, setFormvalue] = useState({
     name: "",
     email: "",
     phone: "",
   });
-
-  const submit = async (e) => {
-    e.preventDefault();
-    await axios
-      .post("http://upskilling-egypt.com:3001/contact", data)
-      .then((res) => console.log(res.data));
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+    setFormvalue({ ...formvalue, [name]: value });
+    //console.log(formvalue);
   };
-  const handle = (e) => {
-    let newdata = { ...data };
-    newdata[e.target.name] = e.target.value;
-    setData(newdata);
+  const handleFormsubmit = async (e) => {
+    e.preventDefault();
+
+    await axios.post(
+      "http://upskilling-egypt.com:3001/contact",
+      formvalue
+    );
+    console.log("success");
   };
   return (
     <div className="contact">
@@ -27,27 +29,27 @@ const Contact = () => {
         <div className="container">
           <div className="row d-flex justify-content-center ">
             <div className="col-lg-4 col-12 align-items-center  contact-inputs">
-              <form onSubmit={submit}>
+              <form onSubmit={handleFormsubmit}>
                 <input
-                  onChange={handle}
-                  name="name"
-                  value={data.name}
                   type="text"
                   placeholder="Name"
+                  name="name"
+                  value={formvalue.name}
+                  onChange={handleInput}
                 />
                 <input
-                  onChange={handle}
                   name="email"
-                  value={data.email}
                   type="email"
                   placeholder="Email"
+                  value={formvalue.email}
+                  onChange={handleInput}
                 />
                 <input
-                  onChange={handle}
                   name="phone"
-                  value={data.phone}
                   type="text"
                   placeholder="Phone"
+                  value={formvalue.phone}
+                  onChange={handleInput}
                 />
                 <button type="submit">Send</button>
               </form>
